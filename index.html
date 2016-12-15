@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--Import Google Icon Font-->
+      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		      <style type="text/css">
+
+	  /*
+	  *  common style for reset browser style
+	  */	      
+		p,h3,ul{
+			margin:0;
+			padding:0;
+		}
+		body {
+			background-color:#ccc;
+			background:url(bg.jpg) repeat;
+		}
+	    .clearfix:before, 
+		.clearfix:after {
+			content: " "; 
+			display: table; 
+		}
+
+		.clearfix:after {
+			clear: both;
+		}
+
+		/*
+		*  style for upload widget 
+		*/
+
+		.upload-widget {
+
+			background-color:#fff;
+			-webkit-box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+			width:483px !important;
+			
+			border-radius: 2px;
+		}
+
+		/*
+		*  style for upload-widget-header
+		*/
+		.upload-widget-header 
+		{
+			background-color: #00B5FA;
+			color:#ffffff;
+			padding:11px 41px 11px 41px;
+			
+		}
+		.upload-widget-header > h3
+		{
+			font-size: 24px;
+			font-weight: 700;
+			text-transform: capitalize;
+		}
+
+		/*
+		* style for upload-widget-container 
+		*/
+
+		.upload-widget-container {
+			padding : 22px 43px 22px 43px;
+		}
+
+		.upload-widget-container li {
+			
+			border-bottom:1px solid #ccc;
+			padding:10px 0;
+			clear: both;
+
+		}
+		.upload-widget-container li a,span,p {
+			vertical-align: middle;
+			font-weight: bold;
+		}
+
+
+
+		/*
+		* style for uploading section 
+		*/
+		.uploading {
+			padding-top: 25px;
+		}
+		.uploading p,span {
+			font-weight: normal;
+		}
+		.uploading>div p {
+			padding-bottom: 10px;
+		}
+
+		/*
+		*  style for progress bar
+		*/
+		.progress-container {
+
+			background-color:#D7D7D7;
+			padding: 1px;
+			margin-bottom:25px;
+
+		}
+		.progress-container >.progress-green {
+			background-color:#08DA9D;
+			
+			height: 20px;
+			
+		}
+		.progress-container >.progress-blue {
+			background-color:#00B5FA;
+			height:20px;
+		}
+		     
+		.progress-container >.progress-red {
+			background-color:#EB4D8A;
+			height:20px;
+		} 
+
+		.upload-widget-footer {
+			padding:20px 40px;
+			background-color: #EBEBEB;
+		}
+
+		/*
+		* style for file input button
+		*/
+		.inputfile {
+			height: 0.1px;
+			width: 0.1px;
+			opacity: 0;
+			overflow: hidden;
+			position: absolute;
+			z-index: -1;
+		}
+
+		.inputfile + label {
+			font-size: 14px;
+			font-weight: 700;
+			color: #fff;
+			background: #F15000;
+			display: inline-block;
+			
+			cursor: pointer;
+			padding: 10px;
+		}
+
+		.inputfile:focus + label {
+			outline: 1px dotted #000;
+			outline: -webkit-focus-ring-color auto 5px;
+		}
+
+		.custombtn{
+			font-size: 14px;
+			font-weight: 700;
+			color: #fff;
+			background: #504855;
+			display: inline-block;
+			
+			border:none;
+			cursor: pointer;
+			padding: 10px;
+		}
+
+		/*
+		*   style for tooltip
+		*/
+		.bubble {
+			text-align:center;
+			position: relative;
+			
+		}
+		.bubble .tooltiptext {
+			max-width: 120px;
+			width:auto;
+			background-color:#6F7478;
+			color:white;
+			border-radius: 2px;
+			padding:2px 5px;
+			position: absolute;
+			word-wrap: break-word;
+			z-index: 1;
+			bottom: 150%;
+			left:50%;
+			margin-left: -60px;
+
+		}
+		.bubble .tooltiptext::after {
+			content:"";
+			position: absolute;
+			top:100%;
+			left:50%;
+			margin-left:-5px;
+			border-width: 5px;
+			border-style: solid;
+			border-color:#6F7478 transparent transparent transparent; 
+		}
+      </style>
+</head>
+<body>
+<div class="container">
+<div class="row">
+	<div class="col s4">
+	 <div class="upload-widget">
+	 	
+	 	<div class="upload-widget-header">
+	 	   <h3 class="left">Upload Files</h3>
+	 	   <span class="right"><i class="material-icons">file_upload</i></span>
+	 	   <span class="clearfix"></span>
+	 	 </div>
+	 	<div class="upload-widget-container">
+	 	<ul>
+	 		<li class="clearfix"><a href="#" class="left">fileupload.xls (128 KB)</a> <span class="right"><i class="material-icons">highlight_off</i></span>
+
+	 		</li>
+	 			 		<li class="clearfix"><a href="#" class="left">fileupload.xls (128 KB)</a> <span class="right"><i class="material-icons">highlight_off</i></span>
+
+	 		</li>
+	 			 		<li class="clearfix"><a href="#" class="left">fileupload.xls (128 KB)</a> <span class="right"><i class="material-icons">highlight_off</i></span>
+
+	 	</ul>
+	 	<div class="uploading">
+	 		  
+	 	<div>
+	 		<p><span><i class="material-icons">publish</i></span> Content.doc (126 KB) </p>
+	 		  <div class="progress-container">
+    		  	<div class="progressbar progress-green" style="width:60%"><p></p></div>
+    		  </div>
+	 	</div>
+	 	<div>
+	 		<p><span><i class="material-icons">publish</i></span> Content.doc (126 KB)</p>
+	 		  <div class="progress-container">
+    		  	<div class="progressbar progress-red" style="width:25%"></div>
+    		  </div>
+	 	</div>
+	 	</div>
+	 	</div>
+	 	<div class="upload-widget-footer">
+	 		<input type="file" name="file" id="file" class="inputfile">
+	 		<label for="file">Upload</label>
+	 		<input type="button" value="Cancel" class="custombtn right">
+	 	</div>
+
+	 </div>
+	</div>
+
+</div>
+
+</div>
+<div class="bubble"><span class="tooltiptext">75%</span> </div>
+
+ <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+</body>
+</html>

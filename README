@@ -1,0 +1,21 @@
+Upload Widget
+------------------
+
+This is custom file uploading widget. it show the file which is in progress and recently uploaded file with delete option in right side of the file name.
+
+Getting Started
+--------------------
+copy index.html file and use it anywhere
+
+Requirements
+---------------
+
+Material-Icon font for icon
+
+Browser
+---------------
+
+Google Chrome
+Mozila Firefox 3.0+
+ 
+
